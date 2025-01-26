@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0; 
+  height: 100vh; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: #7B2A60;
+  text-align: center;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.state {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.content {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  font-size: medium;
+  margin-bottom: 1.2rem;
+  box-shadow: none;
+  border-radius: 10rem;
+  border: none;
+  color: aliceblue;
+  cursor: pointer;
+  background-color: #A05386 ;
+}
+
+button:hover {
+  background-color: #B86E9F;
+  transition: 1s;
+}
+
+.links a {
+  opacity: 0; /* Inicialmente invisível */
+  transform: translateY(30px); /* Posicionado abaixo */
+  animation: slideUp 0.6s ease-out forwards; /* Animação */
+}
+
+.links a:nth-child(1) {
+  animation-delay: 0s; /* Sem atraso para o primeiro link */
+}
+
+.links a:nth-child(2) {
+  animation-delay: 0.2s; /* Atraso para o segundo link */
+}
+
+.links a:nth-child(3) {
+  animation-delay: 0.4s; /* Atraso para o terceiro link */
+}
+
+.links a:nth-child(4) {
+  animation-delay: 0.6s; /* Atraso para o quarto link */
+}
+
+/* Definição da animação */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Começa abaixo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Posição final */
+  }
+}
+
+
+.profile-image {
+  animation: float 3s ease-in-out infinite, fadeIn 3s ease-out forwards;  /* Animação suave */
+  opacity: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0); /* Posição inicial */
+  }
+  50% {
+    transform: translateY(-10px); /* Subir */
+  }
+  100% {
+    transform: translateY(0); /* Voltar à posição inicial */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Invisível */
+  }
+  100% {
+    opacity: 1; /* Totalmente visível */
+  }
+}
+
+button:hover {
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

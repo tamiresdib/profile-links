@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamires Dib links</title>
+</head>
+
+<body>
+  <header>
+    <div class="content">
+      <img class="profile-image" src="img.svg" alt="Img raposa fofinha">
+      <h1>{{ name }}</h1>
+      <h2 class="state">{{ location }}</h2>
+      <p>{{ bio }}</p>
+    </div>
+  </header>
+  <section class="links">
+    <a *ngFor="let link of links" [href]="link.url" target="_blank">
+      <button>
+        <span> {{ link.name }}</span>
+      </button>
+    </a>
+  </section>
+</body>
+
+</html>
